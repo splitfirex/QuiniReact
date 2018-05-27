@@ -1,0 +1,302 @@
+#modal {
+    font-family: "Montserrat", sans-serif;
+    visibility: hidden;
+    position: fixed;
+    top: 0px;
+    opacity: 0;
+    z-index: 1000;
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 50px auto;
+    transition: all 0.1s;
+    transition-timing-function: ease;
+    overflow-y: auto;
+}
+
+
+#modal .menu {
+    background-color: rgb(46, 94, 138);
+    position: fixed;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.4em;
+    width: 100%;
+    height: 50px;
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+#modal.showModal {
+    transition: all 0.5s;
+    transition-timing-function: ease;
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+}
+
+#modal .content {
+    background-color: white;
+    color: black;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+#modal .users {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 48px;
+}
+
+#modal .users>div {
+    display: grid;
+    grid-template-columns: 50px 50px 50px auto;
+    grid-auto-rows: 48px;
+    align-items: center;
+    justify-items: center;
+    border-bottom: gray 1px solid;
+}
+
+#modal .users>div>div {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+#modal .users>div>div:nth-child(4) {
+    padding-left: 30px;
+}
+
+#modal .users>div>div:active {
+    font-size: 1.3em;
+    background-color: lightgray;
+}
+
+#modal .users>div>div>svg {
+    display: block;
+    margin: 0 auto;
+}
+
+
+#modal .newLadderBoard {}
+
+
+
+
+
+#modal .joinLadderBoard {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 48px;
+}
+
+#modal .joinLadderBoard>div {
+    display: grid;
+    grid-template-columns: 50px  auto;
+    grid-auto-rows: 48px;
+    align-items: center;
+    justify-items: center;
+    border-bottom: rgba(0, 0, 0,0.05) 1px solid;
+}
+
+#modal .joinLadderBoard>div:active{
+    background-color: lightgray;
+}
+
+
+#modal .joinLadderBoard>div>div {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+#modal .joinLadderBoard>div>div:nth-child(2) {
+    padding-left: 30px;
+}
+
+#modal .joinLadderBoard>div>div>svg {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+#modal .signin {
+    color: white;
+    font-family: "dusan";
+    background-color: rgb(89, 152, 211);
+    background-image: url("../img/bg3.png");
+    height: 100%    ;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 80px 50px 50px 80px 20px 100px;
+    align-items: center;
+    text-align: center;
+
+}
+
+#modal .signin> div{
+    font-size: 1em;
+}
+
+#modal .signin> div:nth-child(1){
+    font-size: 2em;
+}
+
+#modal .signin> div:nth-child(5){
+    color: crimson;
+}
+
+#modal .signin>div>input{
+    text-align: center;
+    color: white;
+    font-size: 1.4em;
+    font-family: "dusan";
+    border: unset;  
+    background-color: unset;
+    border-bottom: white 2px solid;
+}
+
+#modal .signin>div>input::placeholder{
+    color: rgb(255, 255, 255,0.5);
+}
+
+#modal .signin>div>button{
+    color: white;
+    font-size: 1.4em;
+    font-family: "dusan";
+    border: unset;  
+    background-color: unset;
+    border: white 2px solid;
+    padding: 10px;
+}
+
+#modal .signin>div>button:active{
+    color: rgb(89, 152, 211);;
+    background-color: white ;
+    border: rgb(89, 152, 211) 2px solid;
+}
+
+
+
+
+
+
+
+
+
+#modal .register {
+    color: black;
+    font-family: "dusan";
+    background-image: url("../img/bg3.png");
+    height: 100%    ;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 80px 50px 50px 50px 80px 20px 100px;
+    align-items: center;
+    text-align: center;
+
+}
+
+#modal .register> div{
+    font-size: 1em;
+}
+
+#modal .register> div:nth-child(1){
+    font-size: 2em;
+}
+
+#modal .register> div:nth-child(6){
+    color: crimson;
+}
+
+#modal .register>div>input{
+    text-align: center;
+    color: black;
+    font-size: 1.4em;
+    font-family: "dusan";
+    border: unset;  
+    background-color: unset;
+    border-bottom: black 2px solid;
+}
+
+#modal .register>div>input::placeholder{
+    color: rgb(0, 0, 0,0.5);
+}
+
+#modal .register>div>button{
+    color: black;
+    font-size: 1.4em;
+    font-family: "dusan";
+    border: unset;  
+    background-color: unset;
+    border: black 2px solid;
+    padding: 10px;
+}
+
+#modal .register>div>a{
+    color: black;
+}
+
+#modal .register>div>button:active{
+    color: rgb(89, 152, 211);
+    background-color: black ;
+    border: rgb(89, 152, 211) 2px solid;
+}
+
+
+.modalLoading{
+    position: fixed;
+    top: 0px;
+    opacity: 0;
+    z-index: 1000;
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 50px auto;
+    transition: all 0.1s;
+    transition-timing-function: ease;
+    overflow-y: auto;
+}
+
+.modalWelcome{
+    background: url("../img/bg3.png");
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(113, 146, 219);
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: auto;
+    transition: all 0.1s;
+    transition-timing-function: ease;
+    overflow-y: auto;
+    align-items: center;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+

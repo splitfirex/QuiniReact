@@ -1,0 +1,384 @@
+.fRUS{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/RUS.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fBRA{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/BRA.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fEGY{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/EGY.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fKSA{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/KSA.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fURU{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/URU.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fMRC{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/MRC.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fIRN{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/IRN.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fPOR{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/POR.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fESP{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/ESP.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fFRA{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/FRA.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fAUS{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/AUS.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fPER{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/PER.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fDEN{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/DEN.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fCRO{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/CRO.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fNGA{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/NGA.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fARG{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/ARG.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fISL{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/ISL.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fCOS{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/COS.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fSRB{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/SRB.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fSUI{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/SUI.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fGER{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/GER.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fMEX{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/MEX.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fSWE{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/SWE.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fKOR{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/KOR.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+
+.fBEL{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/BEL.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fPAN{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/PAN.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fTUN{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/TUN.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fENG{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/ENG.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fCOL{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/COL.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fJPN{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/JPN.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fPOL{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/POL.jpg);
+      background-size: cover;
+      background-position: center center;
+}
+
+.fSEN{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      ), url(../img/flags/SEN.jpg);
+      background-size: cover;
+      background-position: center center;
+}

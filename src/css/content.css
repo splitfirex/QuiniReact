@@ -1,0 +1,519 @@
+
+
+
+.content-warp{
+    padding-top: 65px;
+    min-height: 600px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.content-warp.showBreadcrumbs{
+    padding-top: 100px;
+}
+
+.iconCenter{
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.content >div.title{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    animation: fadein 1s;
+}
+
+.content >div.ladder{
+    background-color: white;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+    margin-bottom: 15px;
+    border-radius: 2px;
+
+    display: grid;
+    grid-auto-columns:  1fr;
+    grid-template-rows: 2fr 1fr;
+    animation: fadein 1s;
+    
+}
+
+
+.content >div.ladder >div.ladderShow{
+    background-color: grey;
+    align-items: center;
+    justify-items: right;
+    text-align: right;
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      );
+
+}
+
+.ladderColor{
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6) 10px,
+        rgba(0,0,0,0.8) 10px,
+        rgba(0,0,0,0.8) 20px
+      );
+}
+
+.content >div.ladder >div.ladderShow >div{
+    margin-top: 50px;
+    margin-right: 20px;
+    color: white;
+    font-size: 1.4em;
+}
+
+.content >div.ladder >div.ladderMenu{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 50px 50px;
+}
+
+
+.content >div.ladder.logged >div.ladderMenu{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+}
+
+.content >div.ladder >div.ladderMenu >div{
+    border-left: rgba(0,0,0,.09) 1px solid;
+    background-color: white;
+    transition: all 0.1s ease-out;
+}
+
+.content >div.ladder >div.ladderMenu >div:nth-child(1){
+    text-align: center;
+    line-height: 50px;
+}
+
+.content >div.ladder >div.ladderMenu >div:active{
+    background-color: rgba(0,0,0,.2);
+}
+
+.content >div.newLadder {
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 50px;
+    background-color: white;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+    margin-bottom: 15px;
+    height: 50px;
+    transition: all 0.1s ease-out;
+    animation: fadein 1s;
+}
+
+.content >div.newLadder:active{
+    background-color: rgba(0,0,0,.5);
+}
+
+.content >div.match{
+    background-color: white;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+    margin-bottom: 15px;
+    border-radius: 2px;
+    animation: fadein 1s;
+
+    display: grid;
+    grid-template-columns: 50px auto;
+
+}
+
+.content >div.match.user{
+    grid-template-columns: 50px auto 50px;
+}
+
+.content >div.match.user.edit >div:last-child {
+    border-left: 1px solid rgba(0, 0, 0, 0.09);
+    transition: all 0.5s ease-out;
+}
+
+div.match.user.edit >div:nth-child(1){
+    line-height: 100px;
+}
+
+.content >div.match >div:last-child {
+    border-left: 1px solid rgba(0, 0, 0, 0.09);
+    transition: all 0.5s ease-out;
+    
+}
+
+.content >div.match >div:last-child:active{
+    background-color: rgba(0, 0, 0, 0.5);;
+}
+
+div.match >div:nth-child(1){
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    border-right: rgba(0,0,0,.09) 1px solid;
+}
+
+div.matchInfo >div:nth-child(1){
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.matchInfo {
+    align-items: center;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 10px 30px;
+}
+
+div.match.edit .matchInfo{
+    grid-template-rows: 20px 30px 50px;
+}
+
+div.teamMatch{
+    animation: fadein 1s;
+    display: grid;
+    grid-template-columns: auto 10px auto;
+}
+
+div.teambox{
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto 30px auto;
+}
+
+div.teambox > div:nth-child(2){
+    height: 32px;
+}
+
+div.match.edit div.teambox.right{
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+div.match.edit div.teambox.left{
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.editBox{
+    font-size: 1.5em;
+    display: grid;
+    grid-template-columns: 50px 50px 50px auto 50px 50px 50px;
+    grid-auto-rows: 50px;
+}
+
+.editBox > div{
+    padding-top: 15px;
+    text-align: center;
+}
+
+.content >div.player{
+    background-color: white;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+    margin-bottom: 15px;
+    border-radius: 2px;
+    animation: fadein 1s;
+
+    display: grid;
+    grid-auto-columns:  1fr;
+    grid-template-rows: 2fr auto 1fr;
+}
+
+.content >div.player >div.playerShow{
+    text-align: right;
+    background-color: grey;
+      color:white;
+}
+
+.content >div.player >div.playerShow > div{
+    font-size: 1.4em;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+
+
+.content >div.player >div.playerMenu{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.content >div.player >div.playerContent{
+    zoom:0.6;
+    display:  grid;
+    grid-template-columns: repeat(auto-fit, minmax(0.5fr, 1fr));
+}
+
+.content >div.player >div.playerContent > div:nth-last-child(){
+    border-bottom: unset;
+}
+
+.content >div.player >div.playerContent > div >div:nth-child(odd){
+    text-align: center;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+.content >div.player >div.playerMenu.admin{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 50px 50px 50px;
+}
+
+.content >div.player >div.playerMenu >div{
+    border-left: rgba(0,0,0,.09) 1px solid;
+    background-color: white;
+    transition: all 0.1s ease-out;
+}
+
+.content >div.player >div.playerMenu >div:nth-child(1){
+    text-align: center;
+    line-height: 50px;
+}
+
+.content >div.player >div.playerMenu >div:active{
+    background-color: rgba(0,0,0,.2);
+}
+
+.teamboxSeparator{
+    text-align: center;
+    line-height: 50px
+}
+
+
+.content >div.group{
+    background-color: white;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+    display: grid;
+    grid-template-rows: 30px 20px repeat(4,32px);
+    margin-bottom: 15px;
+    animation: fadein 1s;
+}
+
+.content >div.group >div.title{
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+.content >div.group >div.row{
+    justify-items: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: grid;
+    border-bottom: rgba(0,0,0,.09) 1px solid;
+    grid-template-columns: 30px auto 40px 40px 40px 20px;
+}
+
+.content >div.group >div:nth-child(2){
+    line-height: 20px;
+    font-size: 0.8em;
+}
+
+.content >div.group >div.row div:nth-child(2){
+    padding-left: 15px;
+    justify-self: left;
+
+}
+
+.content >div.adminLadder{
+    font-size: 1em;
+    text-align: center;
+    line-height: 50px;
+    background-color: white;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+    margin-bottom: 15px;
+    height: 50px;
+    transition: all 0.1s ease-out;
+    animation: fadein 1s;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.content >div.adminLadder >div{
+    line-height: unset;
+    height: 50px;
+    border-left: rgba(0,0,0,.09) 1px solid;
+}
+
+.content >div.adminLadder >div:active{
+    background-color: lightgray;
+}
+
+.content >div.userLadder{
+    font-size: 1em;
+    text-align: center;
+    line-height: 50px;
+    background-color: white;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+    margin-bottom: 15px;
+    height: 50px;
+    transition: all 0.1s ease-out;
+    animation: fadein 1s;
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+.content >div.userLadder >div{
+    line-height: unset;
+    height: 50px;
+    border-left: rgba(0,0,0,.09) 1px solid;
+}
+
+.content >div.userLadder >div:active{
+    background-color: lightgray;
+}
+
+
+.modalContent {
+    font-size: 1.5em;
+    font-family: 'dusan';
+    color: white;
+    visibility: hidden;
+    position: fixed;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    width: 100%;
+    top:0;
+    z-index: 102;
+    transition: all 0.5s ease-out;
+    opacity: 0;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto;
+}
+
+.backButton{
+    text-align: center;
+    font-size: 1em;
+    width: 50px;
+    justify-items: center;
+    align-items: center;
+}
+
+.backButton:active{
+    Color:black;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.modalContent.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modalContent >div.login{
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-template-rows: 50px 80px 30px 100px 50px auto;
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.modalContent >div.register{
+    align-items: center;
+    justify-items: center;
+    display: grid;
+  grid-template-rows: 50px 50px 50px 50px 80px 50px auto;
+  animation: fadein 1s;
+}
+
+
+.modalContent >div.login > div:last-child, .modalContent >div.register > div:last-child {
+    font-size: 0.7em;
+}
+
+.modalContent input{
+    background-color: unset;
+    border: unset;
+    border-bottom: white 1px solid;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.modalContent button{
+    background-color: unset;
+    border: unset;
+    border: white 1px solid;
+    padding: 10px;
+    color: white;
+    border-radius: 3px;
+}
+
+.modalContent button:active{
+    border: grey 1px solid;
+    background-color: white;
+    color: black;
+}
+
+.modalContent input:placeholder{
+    color: rgba(255,255,255,0.8);
+}
+
+.modalContent input.error{
+    color: rgba(255,5,5,0.8);
+    border-bottom: rgba(255,5,5,0.8) 1px solid;
+
+}
+
+.modalContent >div.newLadder{
+    align-items: center;
+    justify-items: center;
+    display: grid;
+     grid-template-rows:  50px 80px 50px 100px 50px auto;
+}
+
+.modalContent >div.newLadder >div.public {
+    display: grid;
+    grid-template-columns: 40px;
+}
+
+.greenBG{
+    background-color: rgba(82, 158, 72,0.2) ;
+}
+
+.yellowBG{
+    background-color: rgba(243, 239, 0, 0.438) ;
+}
+
+
+.tomatoBG{
+    background-color: rgba(255, 99, 71,0.2) ;
+}
+
+
+.green{
+    background-color: rgba(82, 158, 72,1) ;
+}
+
+.red{
+    background-color: rgba(255, 99, 71,1) ;
+}
+
+
+.modalContent >div.newLadder >div.public >div{
+    padding: 10px;
+}

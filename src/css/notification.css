@@ -1,0 +1,43 @@
+#notification {
+    background-color: rgba(0,0,0, 0.7);
+    grid-area: notf;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.last-result {
+    line-height: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2px;
+    align-self: center;
+    justify-self: center;
+}
+
+.team-box {
+    width: 100px;
+    grid-gap: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.team-box div {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.team-box div.score {
+    font-size: 1.2em;
+}
+
+.team-box div.flag {
+    margin: 0 auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.team-separator {
+    width: 10px;
+    vertical-align: middle;
+    text-align: center;
+}

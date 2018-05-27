@@ -1,0 +1,193 @@
+/* ESTILOS NORMALES (para m�viles en vertical)
+   ========================================================================= */
+
+
+@font-face {
+  font-family: "dusan";
+  src: url("../css/font/FIFA_World_Cup_2018.ttf");
+}
+
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url("../img/bg3.png");
+  font-size: 0.876em;
+  letter-spacing: 1px;
+  padding: 0;
+  margin: 0;
+}
+
+.noscroll { overflow: hidden; }
+
+.container {
+  transition: left 0.5s;
+  transition-timing-function: ease;
+
+  left:0;
+  z-index: 5;
+
+
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-rows: 170px 30px auto auto auto 300px;
+  grid-template-areas: 
+  "notf"  
+  "cont" 
+  "foot";
+}
+
+.container.showMenu {
+  left: calc(100% - 50px);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.2em;
+  height: 36px;
+  padding-right: 30px;
+  margin-top: 7px;
+  line-height: 36px;
+  color: white;
+}
+
+.menuIcon {
+  margin-left: 17px;
+}
+
+.smflag {
+  border-radius: 3px;
+  width: 36px;
+  height: 20px;
+}
+
+#header {
+  grid-area: head;
+  align-self: center;
+  justify-self: center;
+}
+
+.selAlignLeft div {
+  justify-self: right;
+}
+
+.team-box-wcontrol {
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  grid-row-gap: 10px;
+  color: white;
+  width: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.loading{
+  font-size: 4em;
+  color: black;
+  padding: 50px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+  width: 100%;    
+  background-color: rgba(255,255,255, 1);
+  text-align: center;
+  align-content: center;
+  margin-bottom: 20px;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
+.footer {
+  font-family: "dusan";
+  font-size: 2em;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 200px;
+  background-color: rgba(100, 100, 100, 0.5);
+  grid-auto-rows: 30px;
+  grid-gap: 20px;
+  text-align: left;
+}
+
+.footer > div {
+  display:flex;justify-content:left;align-items:center;
+  height: 50px;
+  padding-left: 50px;
+}
+
+.footer > div > a{
+  color:black;
+}
+
+.footer >div:last-child{
+  padding-left: unset;
+  justify-content:center;
+  font-size: 0.4em !important;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Globally */
+
+/* Each state */
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: lightblue;
+}
+
+a:focus {
+  text-decoration: none;
+  color: yellow;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+  color: darkcyan
+}
+
+
+/* RESPONSIVE
+   ========================================================================= */
+
+/* M�viles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
+
+@media (min-width: 768px) {}
+
+/* Tablets en horizonal y escritorios normales
+   ------------------------------------------------------------------------- */
+
+@media (min-width: 1024px) {}
+
+/* Escritorios muy anchos
+   ------------------------------------------------------------------------- */
+
+@media (min-width: 1200px) {}
