@@ -1,5 +1,5 @@
 export var server = "http://localhost:3000/api";
-export var genericPlayername = "padmin";
+export var genericPlayername = "quiniadmin";
 export var genericLaddername = "MAIN_LEADERBOARD";
 
 export var postData = {

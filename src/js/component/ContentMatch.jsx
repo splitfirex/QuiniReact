@@ -167,7 +167,7 @@ export class ContentMatch extends React.Component {
                         toggleEdit={(index) => this.toggleEdit(index)}
                         inc={(index, home) => this.incrementScore(index, home)}
                         dec={(index, home) => this.decrementScore(index, home)}
-                        matchStatus={currentValue.status} />]
+                        matchStatus={currentValue.playerPoint} />]
                     :
                     [this.renderSubtitle(currentValue.groupName), <MatchUser round={index + 1} key={"match" + currentValue.name}
                         id={currentValue.name}
@@ -176,14 +176,14 @@ export class ContentMatch extends React.Component {
                         awayTeam={getTeamObject(this.props.teams, currentValue.away_team)}
                         match={currentValue}
                         toggleEdit={(index) => this.toggleEdit(index)}
-                        matchStatus={currentValue.status} />]
+                        matchStatus={currentValue.playerPoint} />]
                 :
                 [this.renderSubtitle(currentValue.groupName), <Match round={index + 1} key={"match" + currentValue.name}
                     date={zeroPad(d.getDate(), 2) + "/" + zeroPad(d.getMonth(), 2) + " " + zeroPad(d.getHours(), 2) + ":" + zeroPad(d.getMinutes(), 2)}
                     homeTeam={getTeamObject(this.props.teams, currentValue.home_team)}
                     awayTeam={getTeamObject(this.props.teams, currentValue.away_team)}
                     match={currentValue}
-                    matchStatus={currentValue.status} />]
+                    matchStatus={currentValue.playerPoint} />]
         }.bind(this))
     }
 

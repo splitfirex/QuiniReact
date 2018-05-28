@@ -226,17 +226,21 @@ export var fetchRegister = function () {
         return;
     }
     this.dispatch({ type: "LOADING_CONTENT" });
-    postData.body = JSON.stringify({ "username": this.state.username, "password": this.state.password });
-    fetch(server + '/login/signup', postData)
-        .then(function (response) {
-            return response.json();
-        }).then(function (json) {
-            if (json.token !== undefined) {
-                this.props.dispatch({ type: "SUCCESS_LOGIN", username: this.state.username, token: json.token });
-            } else {
-                this.dispatch({ type: "FAIL_PROCESS" });
-            }
-        }.bind(this));
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function (req) {
+        if (req.target.readyState == 4 && req.target.status == 200) {
+            this.props.dispatch({ type: "SUCCESS_LOGIN", username: JSON.parse(req.target.responseText).user.username });
+        } else if (req.target.status == 400) {
+            this.dispatch({ type: "FAIL_PROCESS" });
+        }
+    }.bind(this);
+    xhttp.open("POST", server + "/user/register", true);
+    xhttp.withCredentials = true;
+    xhttp.setRequestHeader("Content-Type", "application/json");
+    xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
+    xhttp.withCredentials = true
+    xhttp.send(JSON.stringify({ "username": this.state.username, "password": this.state.password }));
+
 }
 
 export var fetchNewLadder = function () {
@@ -245,36 +249,43 @@ export var fetchNewLadder = function () {
         return;
     }
     this.dispatch({ type: "LOADING_CONTENT" });
-    postData.body = JSON.stringify({ laddername: this.state.laddername, token: this.props.token, type: this.state.type, "password": this.state.password });
-    fetch(server + '/user/createladder', postData)
-        .then(function (response) {
-            return response.json();
-        }).then(function (json) {
-            if (json.name !== undefined) {
-                this.props.dispatch({ type: "SUCCESS_CREATE", laddername: json.name });
-            } else {
-                this.dispatch({ type: "FAIL_PROCESS" });
-            }
-        }.bind(this));
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function (req) {
+        if (req.target.readyState == 4 && req.target.status == 200) {
+            this.props.dispatch({ type: "SUCCESS_CREATE", laddername: JSON.parse(req.target.responseText).name });
+        } else if (req.target.status == 400) {
+            this.dispatch({ type: "FAIL_PROCESS" });
+        }
+    }.bind(this);
+    xhttp.open("POST", server + "/leader/create", true);
+    xhttp.withCredentials = true;
+    xhttp.setRequestHeader("Content-Type", "application/json");
+    xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
+    xhttp.withCredentials = true
+    xhttp.send(JSON.stringify({ leadername: this.state.laddername, type: this.state.type, "password": this.state.password }));
 }
 
 export var fetchJoinLadder = function () {
-    if (this.props.ladderProtected && this.state.password.length === 0) {
+    if (this.props.ladderProtected && !this.state.password && this.state.password.length === 0) {
         this.dispatch({ type: "FAIL_PROCESS_PASSWORD" });
         return;
     }
     this.dispatch({ type: "LOADING_CONTENT" });
-    postData.body = JSON.stringify({ "token": this.props.token, "laddername": this.props.laddername, "password": this.state.password });
-    fetch(server + '/user/joinladder', postData)
-        .then(function (response) {
-            return response.json();
-        }).then(function (json) {
-            if (json.name !== undefined) {
-                this.props.dispatch({ type: "SUCCESS_JOIN" });
-            } else {
-                this.dispatch({ type: "FAIL_PROCESS_PASSWORD" });
-            }
-        }.bind(this));
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function (req) {
+        if (req.target.readyState == 4 && req.target.status == 200) {
+            this.props.dispatch({ type: "SUCCESS_JOIN" });
+        } else if (req.target.status == 400) {
+            this.dispatch({ type: "FAIL_PROCESS_PASSWORD" });
+        }
+    }.bind(this);
+    xhttp.open("POST", server + "/leader/join", true);
+    xhttp.withCredentials = true;
+    xhttp.setRequestHeader("Content-Type", "application/json");
+    xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
+    xhttp.withCredentials = true
+    xhttp.send(JSON.stringify({ leadername: this.props.laddername, type: this.state.type, "password": this.state.password }));
+
 }
 
 export var fetchPlayerStatus = function (laddername, playername, admin, active) {
@@ -292,27 +303,21 @@ export var fetchPlayerStatus = function (laddername, playername, admin, active) 
     xhttp.send(JSON.stringify({
         "username": playername, "isActive": active, "isAdmin": admin, "leadername": laddername
     }));
-
-
-
-
-    /*   postData.body = JSON.stringify({ "token": this.props.token, "username": playername, "activate": active, "admin": admin, "laddername": laddername });
-       fetch(server + '/user/updateplayerstatus', postData)
-           .then(function (response) {
-               return response.json();
-           }).then(function (res) {
-               this.props.dispatch({ type: "CLOSE_AND_RELOAD" });
-           }.bind(this));*/
 }
 
 export var fetchBanPlayer = function () {
-    postData.body = JSON.stringify({ "token": this.props.token, "username": this.props.playername, "laddername": this.props.laddername });
-    fetch(server + '/user/banplayer', postData)
-        .then(function (response) {
-            return response.json();
-        }).then(function (res) {
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function (req) {
+        if (req.target.readyState == 4 && req.target.status == 200) {
             this.props.dispatch({ type: "CLOSE_AND_RELOAD" });
-        }.bind(this));
+        }
+    }.bind(this);
+    xhttp.open("POST", server + "/leader/kick", true);
+    xhttp.withCredentials = true;
+    xhttp.setRequestHeader("Content-Type", "application/json");
+    xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
+    xhttp.send(JSON.stringify({ "username": this.props.playername, "leadername": this.props.laddername }));
 }
 
 export var fetchUpdateScore = function (matchData) {
@@ -352,14 +357,19 @@ export var fetchUpdateColor = function () {
 }
 
 export var fetchLeaveLadder = function () {
+
     this.dispatch({ type: "LOADING_CONTENT" });
-    postData.body = JSON.stringify({ "token": this.props.token, "laddername": this.props.laddername });
-    fetch(server + '/user/leaveladder', postData)
-        .then(function (response) {
-            return response.json();
-        }).then(function (res) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function (req) {
+        if (req.target.readyState == 4 && req.target.status == 200) {
             this.props.dispatch({ type: "SUCCESS_LEAVE" });
-        }.bind(this));
+        }
+    }.bind(this);
+    xhttp.open("POST", server + "/leader/leave", true);
+    xhttp.withCredentials = true;
+    xhttp.setRequestHeader("Content-Type", "application/json");
+    xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
+    xhttp.send(JSON.stringify({ "leadername": this.props.laddername }));
 }
 
 export var fetchNextMatches = function () {

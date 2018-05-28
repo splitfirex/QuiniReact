@@ -13,6 +13,8 @@ export var colorScore = (score) => {
             return "yellowBG";
         case 3:
             return "greenBG";
+        case 6:
+            return "greenBG";
     }
 }
 
