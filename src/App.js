@@ -63,7 +63,7 @@ class App extends React.Component {
       <div className="footer">
         <div><i class="fab fa-github-square"></i><a style={{ fontSize:"0.5em", lineHeight:"50px", paddingLeft:"20px"}} href="https://github.com/splitfirex">Splitfirex</a></div>
         <div><i class="fab fa-twitter-square"></i><span style={{ fontSize:"0.5em", paddingLeft:"20px"}}>dfarinaf</span></div>
-        <div style={{ textAlign:"center"}} >gallego.ml @ Version 0.1.0_RC</div>      
+        <div style={{ textAlign:"center"}} >gallego.ml @ Version 1.0.0</div>      
       </div>
     </div>
   }
