@@ -92,7 +92,7 @@ function Player(props) {
 
     return (
         <div className="player">
-            <div className={"playerShow f" + ((props.currentValue.winnerTeam != null) && getTeamObject(props.teams, props.currentValue.winnerTeam).shortCode)}>
+            <div className={"playerShow f" + ((props.currentValue.winnerTeam != null) && getTeamObject(props.teams, props.currentValue.winnerTeam).fifaCode)}>
                 <div> {props.currentValue.username} | {props.currentValue.points} </div>
             </div>
             <div id={"id" + props.currentValue.username} className="playerContent">
@@ -109,7 +109,7 @@ function Player(props) {
 function PlayerAdmin(props) {
     return (
         <div className="player">
-            <div className={"playerShow f" + ((props.currentValue.winnerTeam != null) && getTeamObject(props.teams, props.currentValue.winnerTeam).shortCode)}>
+            <div className={"playerShow f" + ((props.currentValue.winnerTeam != null) && getTeamObject(props.teams, props.currentValue.winnerTeam).fifaCode)}>
                 <div> {props.currentValue.username} | {props.points} </div>
             </div>
             <div id={"id" + props.currentValue.username} className="playerContent">

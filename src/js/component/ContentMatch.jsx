@@ -38,8 +38,8 @@ export class ContentMatch extends React.Component {
 
             Object.keys(this.state.content).map(function (key, index, array) {
                 var currentValue = this.state.content[key];
-                var homeTeam = calculateTeam(currentValue, this.state.groups, array, this.props.teams, "home");
-                var awayTeam = calculateTeam(currentValue, this.state.groups, array, this.props.teams, "away");
+                var homeTeam = calculateTeam(currentValue, this.state.groups, this.state.content, this.props.teams, "home");
+                var awayTeam = calculateTeam(currentValue, this.state.groups, this.state.content, this.props.teams, "away");
                 if (currentValue.type != "group") {
                     if (currentValue.home_team != (typeof homeTeam === 'object' ? homeTeam.id : null)) currentValue.update = true;
                     if (currentValue.away_team != (typeof awayTeam === 'object' ? awayTeam.id : null)) currentValue.update = true;
@@ -138,8 +138,8 @@ export class ContentMatch extends React.Component {
             recalculateGroups(this.state.groups, this.state.content);
             Object.keys(this.state.content).map(function (key, index, array) {
                 var currentValue = this.state.content[key];
-                var homeTeam = calculateTeam(currentValue, this.state.groups, array, this.props.teams, "home");
-                var awayTeam = calculateTeam(currentValue, this.state.groups, array, this.props.teams, "away");
+                var homeTeam = calculateTeam(currentValue, this.state.groups, this.state.content, this.props.teams, "home");
+                var awayTeam = calculateTeam(currentValue, this.state.groups, this.state.content, this.props.teams, "away");
                 if (currentValue.type != "group") {
                     if (currentValue.home_team != (typeof homeTeam === 'object' ? homeTeam.id : null)) currentValue.update = true;
                     if (currentValue.away_team != (typeof awayTeam === 'object' ? awayTeam.id : null)) currentValue.update = true;
