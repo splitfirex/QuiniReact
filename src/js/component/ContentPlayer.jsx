@@ -74,11 +74,15 @@ class ContentPlayer extends React.Component {
             this.isActive = !this.state.content.listaUsers[this.props.username] ? false :
                 this.state.content.listaUsers[this.props.username].isActive;
         }
-        return this.state.showLoading ? <Loading  /> : [
+        return this.state.showLoading ? <Loading /> : [
             this.isAdmin &&
             <div className="adminLadder">
                 <div onClick={() => this.props.dispatch({ type: "GO_TO", dest: "LEAVE_LADDER", laddername: this.props.laddername })} > <i className="fas fa-external-link-square-alt" ></i> Abandonar</div>
                 <div className="ladderColor" onClick={() => fetchUpdateColor.bind(this)()} style={{ backgroundColor: this.state.content.bgColor, color: "white" }}> <i className="fas fa-adjust" ></i> Color</div>
+            </div>,
+            (!this.isActive && this.state.content.listaUsers[this.props.username]) &&
+            <div className="inactiveLadder">
+                <div> <i className="far fa-clock" ></i> No se encuentras activo en esta quiniela, ruegale a un admin que te active ;)</div>
             </div>,
             (!this.isAdmin && this.isActive) &&
             <div className="userLadder">
