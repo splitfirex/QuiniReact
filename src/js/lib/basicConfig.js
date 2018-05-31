@@ -1,4 +1,4 @@
-export var server = "http://rest.gallego.ml/api";
+export var server = "http://localhost:3000/api"
 export var genericPlayername = "quiniadmin";
 export var genericLaddername = "MAIN_LEADERBOARD";
 

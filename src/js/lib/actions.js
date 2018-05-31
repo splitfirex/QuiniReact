@@ -69,7 +69,10 @@ export const GlobalAppActions = (state, action) => {
             return { type: (state.type == "Completo") ? "Por Fases" : "Completo" }
         case "SUCCESS_CONTENT":
             return { showLoading: false, content: action.content }
-
+        case "FAIL_KEEP_ALIVE":
+            alert("Ha caducado tu sesion");
+            window.location.reload();
+            return state;
         case "SUCCESS_MATCHES":
             return { showLoading: false, content: action.content }
         case "SUCCESS_GROUPS":
@@ -159,6 +162,21 @@ export var fetchMatches = function () {
     xhttp.send();
 }
 
+export var prefetchKeepAlive = function () {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function (req) {
+        if (req.target.readyState == 4 && req.target.status == 200) {
+        } else if (req.target.readyState == 4 && req.target.status == 400) {
+            this.props.dispatch({ type: "FAIL_KEEP_ALIVE" });
+        }
+    }.bind(this);
+    xhttp.open("POST", server + "/user/sesion", true);
+    xhttp.withCredentials = true;
+    xhttp.setRequestHeader("Content-Type", "application/json");
+    xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
+    xhttp.send();
+}
+
 export var prefetchSession = function () {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function (req) {
@@ -197,6 +215,12 @@ export var fetchLogin = function () {
     xhttp.onreadystatechange = function (req) {
         if (req.target.readyState == 4 && req.target.status == 200) {
             this.props.dispatch({ type: "SUCCESS_LOGIN", username: JSON.parse(req.target.responseText).user.username });
+            setInterval(function () {
+                if (this.state.username != null) {
+                    console.log("Beep!");
+                    prefetchKeepAlive.bind(this)();
+                }
+            }.bind(this), 60000);
         } else if (req.target.status == 400) {
             this.dispatch({ type: "FAIL_PROCESS" });
         }
@@ -206,7 +230,7 @@ export var fetchLogin = function () {
     xhttp.setRequestHeader("Content-Type", "application/json");
     xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
     xhttp.withCredentials = true
-    xhttp.send(JSON.stringify({ "username": this.state.username.trim().replace(/\./g,'_'), "passwd": this.state.password }));
+    xhttp.send(JSON.stringify({ "username": this.state.username.trim().replace(/\./g, '_'), "passwd": this.state.password }));
 }
 
 export var fetchLogout = function () {
@@ -239,7 +263,7 @@ export var fetchRegister = function () {
     xhttp.setRequestHeader("Content-Type", "application/json");
     xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
     xhttp.withCredentials = true
-    xhttp.send(JSON.stringify({ "username": this.state.username.trim().replace(/\./g,'_'), "password": this.state.password.trim() }));
+    xhttp.send(JSON.stringify({ "username": this.state.username.trim().replace(/\./g, '_'), "password": this.state.password.trim() }));
 
 }
 
