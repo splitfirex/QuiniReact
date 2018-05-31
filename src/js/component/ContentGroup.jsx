@@ -1,7 +1,7 @@
 import React from 'react';
 import { GlobalAppActions, fetchGroups, fetchMatches } from '../lib/actions.js'
 import Loading from './ContentUtils.jsx';
-import { recalculateGroups } from '../lib/utils.js';
+import { recalculateGroups, sortProperties } from '../lib/utils.js';
 
 
 export class ContentGroup extends React.Component {
@@ -30,7 +30,7 @@ export class ContentGroup extends React.Component {
         return Object.keys(groups).map(function (key, index, array) {
             var currentValue = groups[key];
             return <Group key={"groupbox" + index} name={key}
-                details={groups[key]}  {...this.props} />
+                details={sortProperties(groups[key], "p", true, true)}  {...this.props} />
         }.bind(this));
     }
 
@@ -41,6 +41,13 @@ export class ContentGroup extends React.Component {
 
 
 function Group(props) {
+
+    var groupsRow = [];
+    props.details.forEach(function (key, index) {
+        if (isNaN(key[0])) return;
+        var ele = key[1];
+        groupsRow.push(<GroupRow key={"GroupRow" + index} idTeam={parseInt(key[0]) - 1} ng={ele.ng} p={ele.p} pg={ele.pg} teams={props.teams} />);
+    })
     return (
         <div className="group">
             <div className="title">
@@ -55,19 +62,14 @@ function Group(props) {
                 <div>Dif</div>
                 <div>P</div>
             </div>
-            {Object.keys(props.details).map(function (key, index) {
-                 
-                 if(isNaN(key)) return;
-                var ele = props.details[key];
-                return <GroupRow key={"GroupRow" + index} idTeam={parseInt(key)-1} ng={ele.ng} p={ele.p} pg={ele.pg} teams={props.teams} />
-            })}
+            {groupsRow}
         </div>
     )
 }
 
 
 function GroupRow(props) {
-   
+    console.log(props);
     return (
         <div className="row" >
             <div>

@@ -20,7 +20,7 @@ export class ContentRegister extends React.Component {
 
     handleChange = event => {
         var newErrorPassword = false;
-        if (this.state.password == null || (event.target.id === "passwordRepeat" &&  this.state.password.indexOf(event.target.value) !== 0)) {
+        if (this.state.password == null || this.state.password.trim().length == 0 || (event.target.id === "passwordRepeat" &&  this.state.password.indexOf(event.target.value) !== 0)) {
             newErrorPassword = true;
         }
 
@@ -39,8 +39,8 @@ export class ContentRegister extends React.Component {
         return <div className="register">
            
                 <div>Registrarse</div>
-                <div><input className={this.state.error ? "error" : ""} id="username" type="text" placeholder="Usuario" value={this.state.username} onChange={this.handleChange.bind(this)} /></div>
-                <div><input className={this.state.errorPassword ? "error" : ""} id="password" type="password" placeholder="Contraseña" value={this.state.password} onChange={this.handleChange.bind(this)} /></div>
+                <div><input className={this.state.error ? "error" : ""} id="username" type="text" placeholder="Usuario (Min:6 char)" value={this.state.username} onChange={this.handleChange.bind(this)} /></div>
+                <div><input className={this.state.errorPassword ? "error" : ""} id="password" type="password" placeholder="Contraseña (Min:6 char)" value={this.state.password} onChange={this.handleChange.bind(this)} /></div>
                 <div><input className={this.state.errorPassword ? "error" : ""} id="passwordRepeat" type="password" placeholder="Repite contraseña" value={this.state.passwordRepeat} onChange={this.handleChange.bind(this)} /></div>
                 <div><button type="button" value="Enviar" onClick={() => this.handleSubmit()} >Enviar</button></div>
                 <div> </div>

@@ -206,7 +206,7 @@ export var fetchLogin = function () {
     xhttp.setRequestHeader("Content-Type", "application/json");
     xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
     xhttp.withCredentials = true
-    xhttp.send(JSON.stringify({ "username": this.state.username, "passwd": this.state.password }));
+    xhttp.send(JSON.stringify({ "username": this.state.username.trim().replace(/\./g,'_'), "passwd": this.state.password }));
 }
 
 export var fetchLogout = function () {
@@ -221,7 +221,7 @@ export var fetchLogout = function () {
 }
 
 export var fetchRegister = function () {
-    if (this.state.password.length === 0 || this.state.passwordRepeat != this.state.password) {
+    if (this.state.password.trim().length === 0 || this.state.passwordRepeat.trim() != this.state.password.trim()) {
         this.dispatch({ type: "FAIL_PROCESS" });
         return;
     }
@@ -239,7 +239,7 @@ export var fetchRegister = function () {
     xhttp.setRequestHeader("Content-Type", "application/json");
     xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
     xhttp.withCredentials = true
-    xhttp.send(JSON.stringify({ "username": this.state.username, "password": this.state.password }));
+    xhttp.send(JSON.stringify({ "username": this.state.username.trim().replace(/\./g,'_'), "password": this.state.password.trim() }));
 
 }
 
