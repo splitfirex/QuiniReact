@@ -1,6 +1,6 @@
 import React from 'react';
 import { GlobalAppActions, fetchNextMatches, fetchPlayers, fetchPlayerStatus, fetchUpdateColor } from '../lib/actions.js'
-import { getTeamObject, colorScore } from '../lib/utils.js'
+import { getTeamObject, colorScore, sortProperties } from '../lib/utils.js'
 import Loading from './ContentUtils.jsx';
 
 class ContentPlayer extends React.Component {
@@ -36,8 +36,8 @@ class ContentPlayer extends React.Component {
 
     renderPayers() {
 
-        return Object.keys(this.state.content.listaUsers).map(function (key, index, array) {
-            var currentValue = this.state.content.listaUsers[key];
+        return sortProperties(this.state.content.listaUsers, "points", true, true).map(function (key, index, array) {
+            var currentValue = key[1];
             if (this.isAdmin) {
 
                 if (currentValue.username === this.props.username) {
